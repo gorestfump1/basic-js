@@ -1,4 +1,7 @@
-module.exports = function createDreamTeam(/* members */) {
-  throw 'Not implemented';
-  // remove line with error and write your code here
-};
+module.exports = function createDreamTeam(friends) {
+ if(typeof !== 'string'){
+      return ("false")
+    } else {
+      return friends.map(word => word.slice(0, 1).toUpperCase()).sort().join("");
+    }
+  };
