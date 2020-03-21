@@ -1,7 +1,8 @@
 module.exports = function createDreamTeam(friends) {
- if(typeof === 'string'){
-      return friends.map(word => word.slice(0, 1).toUpperCase()).sort().join("");
-    } else {
-     return false;
-    }
-  };
+   if(!Array.isArray(friends)) {
+    return false;
+  }
+let Team = [];
+friends.forEach(item =>{ if(typeof(item)=="string") {Team.push(item.trim()[0].toUpperCase());}});
+   return Team.sort().join("");
+};
